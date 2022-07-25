@@ -1,32 +1,45 @@
-<!Doctype html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
 </head>
 <body>
-<h1>Biblioteca</h1>
-    <div id='newBtn-Container'>
-        <button id='newBtn'>+ Novo Livro</button>
-    </div>
-     <div id="popUp">
-        <form id='form' action='/Script.js'>
-            <span class="close">&times;</span>
-            <ledgend>novo livro</ledgend>
-            <div id='textInput'> 
-                <p><input type='text' id='title' name='title' placeholder='Titulo'></p>
-                <p><input type='text' id='author' name='author' placeholder='Autor'></p>
-                <p><input type='text' id='pages' name='pages' placeholder='Paginas'></p>
-            </div>
-            <div id='checkBox'>
-                <p><label >Leu?: </label><input type='checkbox' id='read' name='read' value='yes'></p>
-            </div>
-            <button type='submit' form='form' id='addBtn'>Adicionar</button>
-        </form>
-    </div>
-    <div id='Library-container'></div>
-
-    <script src="Script.js"></script>
+    <form id="form">
+        <input type="text" name="title" placeholder="Titulo" />
+        <input type="text" name="author" placeholder="Autor" />
+        <input type="text" name="pages" placeholder="Paginás" />
+        <label>
+            <input type="checkbox" name="readed" />
+            Leu?
+        </label>
+        <button type="submit">Adicionar</button> 
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    title
+                </th>
+                <th>
+                    author
+                </th>
+                <th>
+                    pages
+                </th>
+                <th>
+                    readed
+                </th>
+                <th>
+                    actions
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <script src="script.js"></script>
 </body>
-
 </html>
